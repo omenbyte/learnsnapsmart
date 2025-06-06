@@ -6,7 +6,7 @@ export const heroData = {
     "Transform your learning experience with AI-powered flashcards, quizzes, and study tools. Make every study session count with LearnSnapSmart.",
   primaryCTA: {
     text: "Try the App",
-    href: "/try-app",
+    href: "/dashboard",
     icon: Sparkles,
   },
   secondaryCTA: {
@@ -76,7 +76,7 @@ export const ctaData = {
   subtitle: "Join thousands of students who have already improved their study efficiency with LearnSnapSmart.",
   cta: {
     text: "Start Learning Smarter Today",
-    href: "/try-app",
+    href: "/dashboard",
     icon: Sparkles,
   },
 }

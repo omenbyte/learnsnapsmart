@@ -5,6 +5,7 @@ import "./globals.css"
 import { ThemeProvider } from "@/components/ThemeProvider"
 import { Navigation } from "@/components/Navigation"
 import { Footer } from "@/components/Footer"
+import { AppProvider } from "@/context/AppContext"
 
 const geist = Geist({
   subsets: ["latin"],
@@ -38,11 +39,13 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${geist.variable} ${geistMono.variable} font-sans antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-          <div className="flex min-h-screen flex-col">
-            <Navigation />
-            <main className="flex-1">{children}</main>
-            <Footer />
-          </div>
+          <AppProvider>
+            <div className="flex min-h-screen flex-col">
+              <Navigation />
+              <main className="flex-1">{children}</main>
+              <Footer />
+            </div>
+          </AppProvider>
         </ThemeProvider>
       </body>
     </html>
